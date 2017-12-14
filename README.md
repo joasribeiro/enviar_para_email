@@ -1,61 +1,61 @@
-Introduction
+Introdução
 ============
 
-Swift Mailer is a for sending e-mails from PHP applications.
+O Swift Mailer é um para enviar e-mails de aplicativos PHP.
 
-System Requirements
+Requisitos de sistema
 -------------------
 
-Swift Mailer requires PHP 7.0 or higher (``proc_*`` functions must be
-available).
+Swift Mailer requer PHP 7.0 ou superior (as funções `` proc_ * `` devem ser
+acessível).
 
-Swift Mailer does not work when used with function overloading as implemented
-by ``mbstring`` when ``mbstring.func_overload`` is set to ``2``.
+Swift Mailer não funciona quando usado com sobrecarga de função como implementado
+por `` mbstring`` quando `` mbstring.func_overload`` está definido para `` 2``.
 
-Installation
+Instalação
 ------------
 
-The recommended way to install Swiftmailer is via Composer:
+A maneira recomendada de instalar o Swiftmailer é através do Compositor:
 
-.. code-block:: bash
+... código-bloco :: bash
 
-    $ composer require "swiftmailer/swiftmailer:^6.0"
+    $ compositor exige "swiftmailer / swiftmailer: ^ 6.0"
 
-Basic Usage
+Uso básico
 -----------
 
-Here is the simplest way to send emails with Swift Mailer::
+Aqui está a maneira mais simples de enviar e-mails com Swift Mailer ::
 
-    require_once '/path/to/vendor/autoload.php';
+    require_once '/path/to/vendor/autoload.php';
 
-    // Create the Transport
-    $transport = (new Swift_SmtpTransport('smtp.example.org', 25))
-      ->setUsername('your username')
-      ->setPassword('your password')
-    ;
+    // Criar o Transporte
+    $ transport = (novo Swift_SmtpTransport ('smtp.example.org', 25))
+      -> setUsername ('seu nome de usuário')
+      -> setPassword ('sua senha')
+    ;
 
-    // Create the Mailer using your created Transport
-    $mailer = new Swift_Mailer($transport);
+    // Crie o Mailer usando o seu Transporte criado
+    $ mailer = new Swift_Mailer ($ transport);
 
-    // Create a message
-    $message = (new Swift_Message('Wonderful Subject'))
-      ->setFrom(['john@doe.com' => 'John Doe'])
-      ->setTo(['receiver@domain.org', 'other@domain.org' => 'A name'])
-      ->setBody('Here is the message itself')
-      ;
+    // Criar uma mensagem
+    $ message = (new Swift_Message ('Wonderful Subject'))
+      -> setFrom (['john@doe.com' => 'John Doe'])
+      -> setTo (['receiver@domain.org', 'other@domain.org' => 'Um nome'])
+      -> setBody ('Aqui está a própria mensagem')
+      ;
 
-    // Send the message
-    $result = $mailer->send($message);
+    // Envie a mensagem
+    $ result = $ mailer-> send ($ message);
 
-You can also use Sendmail as a transport::
+Você também pode usar o Sendmail como um transporte ::
 
-    // Sendmail
-    $transport = new Swift_SendmailTransport('/usr/sbin/sendmail -bs');
+    // Enviar correio
+    $ transport = new Swift_SendmailTransport ('/ usr / sbin / sendmail -bs');
 
-Getting Help
+Conseguindo ajuda
 ------------
 
-For general support, use `Stack Overflow <https://stackoverflow.com>`_.
+Para obter suporte geral, use 'Depósito de pilha <https://stackoverflow.com> `_.
 
-For bug reports and feature requests, create a new ticket in `GitHub
-<https://github.com/swiftmailer/swiftmailer/issues>`_.
+Para relatórios de erros e solicitações de recursos, crie um novo ticket no `GitHub
+<https://github.com/swiftmailer/swiftmailer/issues> `_.
