@@ -1,6 +1,7 @@
 Introduction
 ============
 
+
 Swift Mailer is a for sending e-mails from PHP applications.
 
 System Requirements
