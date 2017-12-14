@@ -1,0 +1,7 @@
+{
+    "name": "joasribeiro/teste",
+    "require": {
+        "swiftmailer/swiftmailer": "^6.0"
+    }
+
+}
