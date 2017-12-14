@@ -30,7 +30,9 @@ Aqui está a maneira mais simples de enviar e-mails com Swift Mailer ::
 
     // Criar o Transporte
     $ transport = (novo Swift_SmtpTransport ('smtp.example.org', 25))
+    
       -> setUsername ('seu nome de usuário')
+      
       -> setPassword ('sua senha')
     ;
 
